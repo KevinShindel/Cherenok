@@ -11,6 +11,7 @@
   <title>Document</title>
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="page-header">
     <div class="page-wrapper wrapper">
@@ -189,30 +190,36 @@
   </main>
 
   <!-- Блок subscribe -->
-  <article class="subscribe">
-    <div class="wrapper subscribe-wrapper">
-    <img class="subscribe__image" src="./image/image-sub.png" alt="Оповещения">
+<article class="subscribe">
+  <div class="wrapper">
+    <section class="subscribe-wrapper">
+      <h2 class="visually-hidden">Подписаться на скидки</h2>
+      <img class="subscribe__image" src="./image/image-sub.png" alt="Оповещения">
 
-    <div class="subscribe__block">
-      <h3 class="subscribe__header">Подписывайтесь на скидки и рекомендации</h3>
-      <p>
-      <label class="visually-hidden" for="subscribe_name"></label>
-      <input class="subscribe__name" type="text" id="subscribe_name" name="subscribe_name" value="" placeholder="Ваше имя">
-      <label class="visually-hidden" for="subscribe_email"></label>
-      <input class="subscribe__email" type="email" id="subscribe_email" name="subscribe_email" value="" placeholder="Ваш имейл">
-      <button class="subscribe__button" type="button" name="button">Подписаться</button>
-      </p>
-    </div>
+      <div class="subscribe__block">
+        <h3 class="subscribe__header">Подписывайтесь на скидки и рекомендации</h3>
 
-    </div>
-  </article>
+          <form action="">
+            <p class="subscribe__form">
+          <label class="visually-hidden" for="subscribe_name"></label>
+          <input class="subscribe__name" type="text" id="subscribe_name" name="subscribe_name" value="" placeholder="Ваше имя">
+          <label class="visually-hidden" for="subscribe_email"></label>
+          <input class="subscribe__email" type="email" id="subscribe_email" name="subscribe_email" value="" placeholder="Ваш имейл">
+          <button class="subscribe__button" type="button" name="button">Подписаться</button>
+          </p>
+          </form>
+
+      </div>
+    </section>
+  </div>
+</article>
 
   <!-- FOOTER -->
   <footer class="page-footer">
-    <div class="wrapper">
+    <div class="wrapper footer-wrapper">
 
     <article class="footer-subscribe">
-      <img class="footer-subscribe__logo" src="" alt="logo" title="Черенок Интернет Магазин">
+      <img class="footer-subscribe__logo" src="./image/place-for-logo.png" width="171" height="59" alt="logo" title="Черенок Интернет Магазин">
       <h5 class="footer-subscribe__header">Подписаться на рассылку</h5>
       <p>
         <label class="visually-hidden" for="footer-subscribe-email"></label>
@@ -224,43 +231,68 @@
     <section class="footer-nav">
       <h5 class="nav-header">Покупателям</h5>
       <nav class="">
-        <ul>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">О магазине</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Контакты</a></li>
-          <li><a href="">Оплата</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Политика конфиденциальности</a></li>
-          <li><a href="">Условия сотрудничества</a></li>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Каталог</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">О магазине</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Новости</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Контакты</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Оплата</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Доставка</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Политика конфиденциальности</a>
+          </li>
+          <li class="footer__nav-list__item">
+            <a class="footer__nav-list__item__link" href="#">Условия сотрудничества</a>
+          </li>
         </ul>
       </nav>
     </section>
 
     <section class="footer-contact">
-      <h5>Контакты</h5>
-      <ul>
-        <li>г.Николаев, ул. Большая Морская, 87</li>
-        <li><a href="mailto:sale@cherenok.com.ua?subject=feedback">sale@cherenok.com.ua</a></li>
-        <li><a href="tel:+380991234567">+38(099) 123-45-67</a></li>
-        <li><a href="tel:+380991234567">+38(099) 123-45-67</a></li>
+      <h5 class="contact-header">Контакты</h5>
+      <ul class="footer-contact-list">
+        <li class="footer-contact__item"><span class="footer-contact__item-addr">г.Николаев, ул. Большая Морская, 87</span></li>
+        <li class="footer-contact__item">
+          <a class="footer-contact__item-link" href="mailto:sale@cherenok.com.ua?subject=feedback">sale@cherenok.com.ua</a></li>
+        <li class="footer-contact__item">
+          <a class="footer-contact__item-link" href="tel:+380991234567">+38(099) 123-45-67</a></li>
+        <li class="footer-contact__item">
+          <a class="footer-contact__item-link" href="tel:+380991234567">+38(099) 123-45-67</a></li>
       </ul>
     </section>
 
     <section class="footer-operating">
-      <h5>Режим работы</h5>
-      <dl>
-        <dt>Пн - Пт:</dt>
-        <dd>09:00 - 18:00</dd>
-
-        <dt>Сб:</dt>
-        <dd>10:00 - 18:00</dd>
-
-        <dt>Вс.</dt>
-        <dd>Выходной</dd>
-      </dl>
-      <p>
-        Внимание! Заказы принимаются <br> по выходным и в праздники!
+      <h5 class="operating-header">Режим работы</h5>
+      <table class="operating-timetable">
+        <tbody>
+          <tr>
+            <td class="operating-day">Пн - Пт:</td>
+            <td class="operating-time">09:00 - 18:00</td>
+          </tr>
+          <tr>
+            <td class="operating-day">Сб:</td>
+            <td class="operating-time">10:00 - 18:00</td>
+          </tr>
+          <tr>
+            <td class="operating-day">Вс.</td>
+            <td class="operating-time">Выходной</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="operating-description">
+        Внимание! Заказы принимаются  по <br> выходным и в праздники!
       </p>
 
       <article class="social-navigation">
@@ -271,7 +303,8 @@
               <img class="social-list__item__link-icon" src="" alt="Инстаграм">
             </a>
           </li>
-          <li><a class="social-list__item__link" href="#" target="_blank" title="Мы в Фейсбук">
+          <li class="social-list__item">
+          <a class="social-list__item__link" href="#" target="_blank" title="Мы в Фейсбук">
               <img class="social-list__item__link-icon" src="" alt="Фейсбук"></a>
           </li>
         </ul>

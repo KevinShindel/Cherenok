@@ -706,6 +706,7 @@ line-height: 14px;
 
 .subscribe__block {
 	flex-grow: 1;
+	padding-left: 6%;
 }
 
 
@@ -725,15 +726,20 @@ line-height: 14px;
 	padding-left: 15px;
 	padding-top: 11px;
 	padding-bottom: 11px;
+	width: 31%;
+}
 
 
+.subscribe__form {
+	display: flex;
+	justify-content: space-between;
 }
 
 
 
 .subscribe__button {
 	display: inline-block;
-	/* width: 100%; */
+	width: 31%;
 	border: 0;
 	background-color: #28A87F;
 	padding:  10px;
@@ -754,18 +760,129 @@ line-height: 14px;
   background-color: #FFFFFF;
 }
 
+.footer-wrapper {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
 .footer-subscribe,
 .footer-nav,
 .footer-contact,
 .footer-operating {
   display: inline-block;
   vertical-align: top;
+}
 
+.nav-header {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	color: #333333;
+	margin-top: 0;
+}
+
+.footer__nav-list {
+	padding-inline-start: 0px;
+}
+
+.footer__nav-list__item {
+	list-style-type: none;
+}
+
+.footer__nav-list__item__link {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.contact-header {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	color: #333333;
+	margin-top: 0;
 }
 
 
+.footer-contact-list {
+	padding-inline-start: 0px;
+}
+
+.footer-contact__item {
+	list-style-type: none;
+}
+
+.footer-contact__item-addr {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.footer-contact__item-link {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+	color: #333333;
+	text-decoration: none;
+}
 
 
+.operating-header {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	color: #333333;
+	margin-top: 0;
+}
+
+.operating-day,
+.operating-time {
+	width: 50%;
+}
+
+.operating-description {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 15px;
+	color: #9898A4;
+}
+
+.social-header {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	color: #333333;
+}
+
+.social-list {
+	padding-inline-start: 0;
+}
+
+.social-list__item {
+	list-style-type: none;
+	display: inline-block;
+
+}
 
 /* Модалки */
 .modal {
