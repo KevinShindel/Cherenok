@@ -57,7 +57,16 @@ $('.goods-list__button').click(function(event){
   $('goods-list__button').removeClass('button__active');
   $(event.target).toggleClass('button__active');
   console.log('Menu opened!')
-})
+});
+
+// Отображение резульатов поиска
+$('.main_search__input').on('input', function(event){
+  if (event.target.value !== '') {
+    $('.main-search_results').addClass('show-search_results')
+  } else {
+      $('.main-search_results').removeClass('show-search_results')
+  }
+});
 
 
 $(document).ready(function() {

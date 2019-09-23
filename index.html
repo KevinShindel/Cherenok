@@ -110,10 +110,32 @@
       <section class="main_search">
         <label for="main_search" class="visually-hidden">Поиск по товарам</label>
         <input class="main_search__input" type="search" name="search" value="" id="main_search" placeholder="Введите название товара" />
-        <span class="main_search-microphone-icon"></span>
-        <button class="main_search__button" type="button" name="button" title="Поиск по сайту">
-          <img class="main_search__button-icon" src="./image/search-icon.png" alt="search icon">
+        <button type="button" name="button" class="main_search-microphone-icon" id="mic_button">
+          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.9397 13.4685C2.89745 13.4685 0.426086 10.9971 0.426086 7.9549V7.22626C0.426086 6.88072 0.704021 6.60278 1.04956 6.60278C1.3951 6.60278 1.67304 6.88072 1.67304 7.22626V7.9549C1.67304 10.3061 3.58853 12.2216 5.9397 12.2216H6.0674C8.41858 12.2216 10.3341 10.3061 10.3341 7.9549V7.22626C10.3341 6.88072 10.612 6.60278 10.9575 6.60278C11.3031 6.60278 11.581 6.88072 11.581 7.22626V7.9549C11.581 10.9971 9.10966 13.4685 6.0674 13.4685H5.9397Z" fill="#C4C4C4"/>
+            <path d="M5.9397 11.2376C4.04674 11.2376 2.50683 9.69766 2.50683 7.8047V3.43287C2.49932 1.53991 4.04674 0 5.9397 0H6.0674C7.96036 0 9.50026 1.53991 9.50026 3.43287V7.8047C9.50026 9.69766 7.96036 11.2376 6.0674 11.2376H5.9397ZM5.9397 1.24695C4.73031 1.24695 3.74627 2.23099 3.74627 3.43287V7.8047C3.74627 9.01409 4.73031 9.99813 5.9397 9.99813H6.0674C7.27679 9.99813 8.26083 9.01409 8.26083 7.8047V3.43287C8.26083 2.22348 7.27679 1.23944 6.0674 1.23944H5.9397V1.24695Z" fill="#C4C4C4"/>
+            <path d="M2.7923 16.0001C2.44676 16.0001 2.16882 15.7222 2.16882 15.3766C2.16882 15.0311 2.44676 14.7532 2.7923 14.7532H9.20732C9.55286 14.7532 9.8308 15.0311 9.8308 15.3766C9.8308 15.7222 9.55286 16.0001 9.20732 16.0001H2.7923Z" fill="#C4C4C4"/>
+            <path d="M6.62332 12.8901H5.37637V16H6.62332V12.8901Z" fill="#C4C4C4"/>
+          </svg>
         </button>
+        <button class="main_search__button" type="button" name="button" title="Поиск по сайту">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5254 15.2C14.3438 15.2 14.1751 15.1287 14.0519 15.0055L10.3092 11.2628L10.2638 11.2952C9.24539 12.0865 7.96756 12.5276 6.67026 12.5276C5.10701 12.5276 3.63458 11.9179 2.52539 10.8087C1.40972 9.706 0.799988 8.23356 0.799988 6.66383C0.799988 5.0941 1.40972 3.62816 2.51891 2.51897C3.6281 1.40978 5.10053 0.800049 6.66377 0.800049C8.22702 0.800049 9.69945 1.40978 10.8086 2.51897C12.8973 4.60762 13.1049 7.93518 11.2951 10.2638L11.2627     10.3092L15.0054 14.0519C15.2649 14.3114 15.2649 14.7395 15.0054 15.0055C14.8757 15.1287 14.707 15.2 14.5254 15.2ZM6.66377 2.15572C5.45729 2.15572 4.32864 2.62275 3.47242 3.47897C1.71458 5.23681 1.71458 8.09735 3.47242 9.85518C4.32215 10.7049 5.45729 11.1784 6.66377 11.1784C7.87026 11.1784 8.99891 10.7114 9.85512 9.85518C11.613 8.09735 11.613 5.23681 9.85512 3.47897C8.99891 2.62275 7.87026 2.15572 6.66377 2.15572Z" fill="white"/>
+          </svg>
+        </button>
+
+        <div class="main-search_results ">
+          <ul class="search_results-list">
+
+            <li class="results-item">
+              <img class="results-item-image" src="./image/search_result_1.png" alt="">
+              <span></span>
+              <span><b>1199</b><small>грн</small></span>
+            </li>
+
+          </ul>
+        </div>
+
       </section>
       <section class="user-options">
         <ul class="options-list">
@@ -309,12 +331,68 @@
       <br>
 
       <div>
-      <ul class="">
-        <li><img src="" alt=""></li>
-        <li><img src="" alt=""></li>
-        <li><img src="" alt=""></li>
-        <li><img src="" alt=""></li>
+      <ul class="best-sale-list">
+
+        <li class="sale-item">
+          <div class="sale-item_wrapper">
+            <a class="sale-item-link" href="#" >
+          <img class="sale-item-image"src="./image/best-seller_1.png" alt="Чистящий набор 3 в 1 ColorWay" title="Чистящий набор 3 в 1 ColorWay" width="216" height="236" >
+          <span class="sale-hint hint-bestseller">Хит</span>
+          <p class="sale-item_secription">
+            Чистящий набор 3 в 1 ColorWay</p>
+          <p class="sale-item_price">
+            <b>89</b><small> грн</small>
+          </p>
+          </a>
+          </div>
+        </li>
+
+        <li class="sale-item">
+          <div class="sale-item_wrapper">
+          <span class="sale-hint"></span>
+          <img src="./image/best-seller_2.png" alt="" >
+          <p class="sale-item_secription">
+            Чистящий набор 3 в 1 ColorWay</p>
+          <p class="sale-item_price">
+            <b>89</b><span> грн.</span>
+          </p>
+          </div>
+        </li>
+
+        <li class="sale-item">
+          <div class="sale-item_wrapper">
+          <span class="sale-hint hint-new">Новинка</span>
+          <img src="./image/best-seller_3.png" alt="" >
+          <p class="sale-item_secription">
+            Чистящий набор 3 в 1 ColorWay</p>
+          <p class="sale-item_price">
+            <b>89</b><span> грн.</span>
+          </p>
+          </div>
+        </li>
+
+        <li class="sale-item">
+          <div class="sale-item_wrapper">
+          <span class="sale-hint"></span>
+          <img src="./image/best-seller_4.png" alt="" >
+          <p class="sale-item_secription">
+            Чистящий набор 3 в 1 ColorWay</p>
+          <p class="sale-item_price">
+            <b>89</b><span> грн.</span>
+          </p>
+          </div>
+        </li>
+
       </ul>
+
+      <p class="sale-item_show">
+        <button class="sale-item_show-button">Показать еще 4 товара</button>
+        <span class="sale-item_show-arrow">
+          <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.97167 11.6681C2.86813 11.6681 0.340698 9.10966 0.340698 5.96276C0.340698 2.85922 2.86813 0.331787 5.97167 0.331787C9.07521 0.331787 11.6026 2.85922 11.6026 5.96276V6.09904L12.9345 4.76718C13.015 4.68665 13.1203 4.64949 13.2318 4.64949C13.3434 4.64949 13.4549 4.69285 13.5292 4.77338C13.6965 4.94064 13.6965 5.20701 13.5292 5.37426L11.4788 7.42471C11.4602 7.44329 11.4354 7.46187 11.4168 7.48046C11.4106 7.48665 11.4044 7.48665 11.392 7.49285L11.3796 7.49904C11.3549 7.51763 11.3239 7.53002 11.2929 7.53621H11.2867C11.2805 7.53621 11.2681 7.54241 11.2619 7.54241C11.2372 7.5486 11.2062 7.5486 11.1814 7.5486C11.1566 7.5486 11.1257 7.5486 11.1009 7.54241C11.0947 7.54241 11.0823 7.53621 11.0761 7.53621L11.0637 7.53002C11.0327 7.52382 11.0018 7.51143 10.977 7.49285L10.9708 7.48665C10.9646 7.48046 10.9584 7.48046 10.946 7.47426C10.9212 7.45568 10.9026 7.44329 10.8841 7.41851L8.82742 5.36188C8.66017 5.19462 8.66017 4.92825 8.82742 4.76099C8.90796 4.68046 9.01326 4.6371 9.12477 4.6371C9.23627 4.6371 9.34158 4.68046 9.42211 4.76099L10.754 6.09285V5.95657C10.754 3.31763 8.61061 1.17426 5.97167 1.17426C3.33273 1.17426 1.18937 3.31763 1.18937 5.95657C1.18937 8.63267 3.33273 10.8132 5.97167 10.8132H5.98406C7.24158 10.8132 8.46813 10.3052 9.35397 9.4132C9.4345 9.33267 9.53981 9.28931 9.65132 9.28931C9.76282 9.28931 9.86813 9.33267 9.94866 9.4132C10.1159 9.58046 10.1159 9.84683 9.94866 10.0141C8.90796 11.061 7.4584 11.6619 5.98406 11.6619L5.97167 11.6681Z" fill="#9898A4"/>
+          </svg>
+        </span>
+      </p>
       </div>
       </div>
       </section>
@@ -727,6 +805,7 @@
   <script src="./js/jquery-3.4.1.min.js" charset="utf-8"></script>
   <script src="./js/slick.min.js" charset="utf-8"></script>
   <script src="./js/script.js" charset="utf-8"></script>
+  <script src="./js/speech.js" charset="utf-8"></script>
 </body>
 
 </html>

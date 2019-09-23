@@ -311,6 +311,7 @@ text-decoration:none;
   display: inline-flex;
   margin-left: auto;
   margin-right: 10px;
+	position: relative;
 }
 
 
@@ -318,8 +319,7 @@ text-decoration:none;
 .main_search__input {
   position: relative;
   width: calc(100% - 46px);
-  opacity: 0.3;
-  border: 1px solid #9898A4;
+	border: 1px solid rgba(152,152,164,0.3);
   box-sizing: border-box;
   border-radius: 3px;
   font-family: Montserrat;
@@ -332,15 +332,23 @@ text-decoration:none;
   color: #9898A4;
   padding-left: 15px;
   padding-right: 30px;
+	z-index: 2;
+}
+
+.main_search__input::placeholder {
+	opacity: 0.3;
 }
 
 .main_search-microphone-icon {
-  position: absolute;
-  background-image: url("../image/microphone-icon.png");
+	position: absolute;
   width: 20px;
   height: 20px;
-  top:0;
-  right: 0;
+  top: 25%;
+  right: 55px;
+  border: 0;
+  background-color: transparent;
+	cursor: pointer;
+	z-index: 2;
 }
 
 .main_search__button {
@@ -351,7 +359,56 @@ text-decoration:none;
   border-radius: 3px;
   padding: 0;
   cursor: pointer;
+	display: flex;
+  justify-content: center;
+	z-index: 2;
 }
+
+/* Поле с результатами поиска  */
+
+.main-search_results {
+	position: absolute;
+	display: none;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
+	z-index: 0;
+}
+
+.show-search_results {
+	display: block;
+}
+
+.search_results-list  {
+	list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.results-item {
+
+}
+
+.results-item-image {
+	width: 50px;
+	height: auto;
+}
+
+
+
+
+
+
+
 
 
 .user-options {
@@ -718,6 +775,130 @@ line-height: 14px;
 
 .best-goods-description__active {
 	color: white;
+}
+
+
+
+.best-sale-list {
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
+	justify-content: space-between;
+	margin: 0;
+	margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+
+.sale-item {
+	display: inline-block;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
+	border-radius: 3px;
+	padding-left: 25px;
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-bottom: 15px;
+	max-height: 391px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.sale-item_wrapper {
+	position: relative;
+	max-width: 216px;
+}
+
+.sale-item-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+ .sale-item-image {
+	 position: relative;
+ }
+
+.sale-hint {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	padding-left: 11px;
+	padding-right: 11px;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	border-radius: 3px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 10px;
+	line-height: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.hint-bestseller {
+	display: inline;
+	background-color: #BB6BD9;
+}
+
+.hint-new {
+	display: inline;
+	background-color: #EFC032;
+}
+
+.sale-item_secription {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+	color: #333333;
+}
+
+.sale-item_price {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 20px;
+	text-align: center;
+	color: #333333;
+}
+
+.sale-item_show {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 0;
+	padding: 0;
+	align-items: center;
+}
+
+.sale-item_show-button {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 17px;
+	color: #9898A4;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 1px dotted #9898A4;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.sale-item_show-arrow {
+	font-size: 0;
 }
 
 /* Секция subscribe */
