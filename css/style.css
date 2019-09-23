@@ -476,7 +476,7 @@ text-decoration:none;
 
 .goods {
   display: inline-block;
-  max-width: 262px;
+  width: 262px;
   max-height: 335px;
   margin-left: 0;
   margin-right: auto;
@@ -792,6 +792,7 @@ line-height: 14px;
 
 
 .sale-item {
+	position: relative;
 	display: inline-block;
 	background: #FFFFFF;
 	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
@@ -806,11 +807,113 @@ line-height: 14px;
 	margin-bottom: 10px;
 }
 
+.sale-item-buy {
+	display: none;
+	position: absolute;
+	bottom: -90px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	left: 0;
+	background-color: #FFFFFF;
+	width: 216px;
+	z-index: 3;
+}
+
+.sale-menu-show {
+	display: block;
+}
+
+.color-picker-list {
+	list-style-type: none;
+	padding-inline-start: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.color-picker-item {
+
+}
+
+.color-picker-button {
+	border: 0;
+	background-color: transparent;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.picker-green {
+	background-color: #6FCF97;
+}
+
+.picker-yellow {
+	background-color: #EFC032;
+}
+
+.picker-orange {
+	background-color: #F2994A;
+}
+
+
+.add-to-compare-button {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.sale-buy-counter {
+	position: relative;
+	border: 1px solid #E6E6E6;
+	box-sizing: border-box;
+	border-radius: 3px;
+	padding-left: 34px;
+	padding-top: 14px;
+	padding-right: 60px;
+	padding-bottom: 14px;
+	width: 136px;
+}
+
+.buy-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.buy-wrapper {
+	display: inline-block;
+	position: relative;
+
+}
+
+.buy-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #28A87F;
+	border-radius: 3px;
+	border: 0;
+	width: 52px;
+	height: 44px;
+}
+
+.add-to-whishlist-button {
+	background-color: #28A87F;
+	border: 0;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+
+}
 
 
 .sale-item_wrapper {
 	position: relative;
-	max-width: 216px;
+	width: 216px;
 }
 
 .sale-item-link {
@@ -861,6 +964,7 @@ line-height: 14px;
 	line-height: 16px;
 	text-align: center;
 	color: #333333;
+	min-height: 35px;
 }
 
 .sale-item_price {
@@ -877,7 +981,7 @@ line-height: 14px;
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
-	margin-bottom: 0;
+	margin-bottom: 30px;
 	padding: 0;
 	align-items: center;
 }
@@ -1194,7 +1298,7 @@ line-height: 14px;
   position: fixed;
   top: 150px;
   left: calc(50% - 400px/2);
-  z-index: 2;
+  z-index: 10;
 }
 
 .modal_wrap {
@@ -1324,7 +1428,7 @@ input:invalid + span:after {
   left:0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.35);
-  z-index: 1;
+  z-index: 5;
 }
 /* Стилизация чекбокса */
 .container {

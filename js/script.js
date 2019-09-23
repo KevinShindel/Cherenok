@@ -69,6 +69,16 @@ $('.main_search__input').on('input', function(event){
 });
 
 
+// Скрытие меню покупки
+$('.sale-item').on('mouseover',function(event) {
+  $(this).find('.sale-item-buy').addClass('sale-menu-show')
+});
+
+$('.sale-item').on('mouseout',function(event) {
+  $(this).find('.sale-item-buy').removeClass('sale-menu-show')
+});
+
+
 $(document).ready(function() {
 
   // Карусель
