@@ -71,11 +71,31 @@ $('.main_search__input').on('input', function(event){
 
 // Скрытие меню покупки
 $('.sale-item').on('mouseover',function(event) {
-  $(this).find('.sale-item-buy').addClass('sale-menu-show')
+  $(this).find('.sale-item-buy').addClass('sale-menu-show');
+  $(this).find('.sale-image-show').addClass('image-show-active');
 });
 
 $('.sale-item').on('mouseout',function(event) {
   $(this).find('.sale-item-buy').removeClass('sale-menu-show')
+  $(this).find('.sale-image-show').removeClass('image-show-active');
+});
+
+// Функциональность клавиш покупок
+$('.sale-buy-increment').on('click',function(event) {
+  $(this).siblings('.sale-buy-counter').val(function(i, oldval) {
+    return ++oldval
+  })
+});
+
+$('.sale-buy-decrement').on('click',function(event) {
+  $(this).siblings('.sale-buy-counter').val(function(i, oldval) {
+    if (oldval > 1) {
+       return --oldval
+     } else {
+       return 1
+     }
+
+  })
 });
 
 

@@ -877,6 +877,14 @@ line-height: 14px;
 	width: 136px;
 }
 
+.sale-buy-counter::-webkit-outer-spin-button,
+.sale-buy-counter::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	/* margin: 0; /* <-- Apparently some margin are still there even though it's hidden */ */
+}
+
+
 .buy-menu {
 	display: flex;
 	justify-content: space-between;
@@ -887,7 +895,34 @@ line-height: 14px;
 .buy-wrapper {
 	display: inline-block;
 	position: relative;
+}
 
+.sale-buy-decrement {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+	border: 0;
+	left: 9px;
+	top: 14px;
+	z-index: 1;
+	cursor: pointer;
+	outline: none;
+	color: #9898A4;
+}
+
+.sale-buy-increment {
+	position: absolute;
+  background-color: transparent;
+	width: 8px;
+	height: 8px;
+  top: 14px;
+  right: 70px;
+  border: 0;
+	z-index: 1;
+	cursor: pointer;
+	outline: none;
+	color: #9898A4;
 }
 
 .buy-button {
@@ -899,6 +934,7 @@ line-height: 14px;
 	border: 0;
 	width: 52px;
 	height: 44px;
+	cursor: pointer;
 }
 
 .add-to-whishlist-button {
@@ -907,7 +943,7 @@ line-height: 14px;
 	border-radius: 50%;
 	width: 24px;
 	height: 24px;
-
+	cursor: pointer;
 }
 
 
@@ -935,7 +971,6 @@ line-height: 14px;
 	padding-top: 5px;
 	padding-bottom: 4px;
 	border-radius: 3px;
-
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 800;
@@ -955,6 +990,25 @@ line-height: 14px;
 	display: inline;
 	background-color: #EFC032;
 }
+
+.sale-image-show {
+	position: absolute;
+	display: none;
+	top: 0;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.image-show-active {
+	display: block;
+}
+
 
 .sale-item_secription {
 	font-family: Montserrat;
