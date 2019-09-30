@@ -418,6 +418,7 @@ text-decoration:none;
 
 .options-list {
   padding-inline-start: 0;
+	width:  max-content;
 }
 
 .options-list__item {
@@ -814,6 +815,8 @@ line-height: 14px;
 	padding-left: 25px;
 	padding-right: 25px;
 	padding-bottom: 25px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 	left: 0;
 	background-color: #FFFFFF;
 	width: 216px;
@@ -990,6 +993,12 @@ line-height: 14px;
 	background-color: #EFC032;
 }
 
+.hint-sellout {
+	display: inline;
+	background-color: #EB5757;
+	font-weight: 500;
+}
+
 .sale-image-show {
 	position: absolute;
 	display: none;
@@ -1062,6 +1071,21 @@ line-height: 14px;
 
 }
 
+.sell-out_carousel .slick-slide {
+	height: 500px;
+}
+
+.sell-out_carousel .sale-item-buy {
+	bottom: -110px;
+}
+
+.sell-out_carousel .custom-next,
+.sell-out_carousel .custom-prev {
+	top: 38%;
+}
+
+
+
 .sell-out-header {
 	font-family: Montserrat;
 	font-style: normal;
@@ -1081,6 +1105,93 @@ line-height: 14px;
 	color: #9898A4;
 }
 
+.sell-timer {
+	position: absolute;
+	bottom: 85px;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.timer-days,
+.timer-hours,
+.timer-minutes,
+.timer-seconds {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 17px;
+	text-align: center;
+	color: #333333;
+	position: relative;
+}
+
+.timer-days::before {
+  content: 'дней';
+  position: absolute;
+  bottom: -14px;
+  left: -3px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #9898A4;
+}
+
+.timer-hours::before {
+	content: 'часов';
+	position: absolute;
+	bottom: -14px;
+	left: -5px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: #9898A4;
+}
+
+.timer-minutes::before {
+	content: 'минут';
+	position: absolute;
+	bottom: -14px;
+	left: -5px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: #9898A4;
+}
+
+.timer-seconds::before {
+	content: 'секунд';
+	position: absolute;
+	bottom: -14px;
+	left: -5px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: #9898A4;
+}
+
+
+
+
 /* Секция buying-now */
 
 .buying-now-header {
@@ -1090,6 +1201,7 @@ line-height: 14px;
 	font-size: 18px;
 	line-height: 22px;
 	color: #333333;
+	margin-top: 0;
 }
 
 .buying-now-header {

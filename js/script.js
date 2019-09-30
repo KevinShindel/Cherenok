@@ -94,7 +94,6 @@ $('.sale-buy-decrement').on('click',function(event) {
      } else {
        return 1
      }
-
   })
 });
 
@@ -122,31 +121,46 @@ $(document).ready(function() {
     slidesToScroll: 1,
     nextArrow: '<button type="button" class="custom-next"></button>',
     prevArrow: '<button type="button" class="custom-prev"></button>',
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
 });
+
+// Функция задания дедлайна
+function setCountdown(day=12, hours=12, minutes=50, seconds=25) {
+  var countDownDate = new Date()
+  time = day*86400000 + hours*3600000 + minutes*60000 + seconds*1000
+  countDownDate.setTime(countDownDate.getTime() + time)
+  return countDownDate
+};
+
+// Указываем кастомные значения даты
+countDownDate = setCountdown()
+
+// Запуск таймера
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  seconds = seconds < 10 ? 0+''+ seconds : seconds
+
+  $('.sell-timer .timer-days').text(days)
+  $('.sell-timer .timer-hours').text(hours)
+  $('.sell-timer .timer-minutes').text(minutes)
+  $('.sell-timer .timer-seconds').text(seconds)
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+$('.timer').after(`<div class="sell-timer">
+                  <span class='timer-days'></span>
+                  <span class='timer-hours'></span>
+                  <span class='timer-minutes'></span>
+                  <span class='timer-seconds'></span>
+                  </div>`)
+
 
 });
