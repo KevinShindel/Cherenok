@@ -100,9 +100,12 @@ $(document).ready(function() {
       $('.main-search_results').addClass('show-search_results');
     } else {
         $('.main-search_results').removeClass('show-search_results')
-        console.log('empty!')
     }
   });
+
+  $('#orders').click(function(){
+    $('.orders').toggleClass('orders_show');
+  })
 
   // Карусель
   $('.news_carousel').slick({
@@ -119,7 +122,7 @@ $(document).ready(function() {
   $('.sell-out_carousel').slick({
     dots: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,

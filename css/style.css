@@ -452,6 +452,12 @@ text-decoration:none;
 	cursor: pointer;
 }
 
+.results-item-show_all:hover,
+.results-item-show_all:focus {
+	color: #28A87F;
+	border-color: #28A87F;
+}
+
 .user-options {
   margin-left: 10px;
   margin-right: 0;
@@ -466,7 +472,66 @@ text-decoration:none;
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
+	position: relative;
 }
+
+.orders {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	background-color: #FFFFFF;
+	display: none;
+	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
+	border-radius: 3px;
+	width:465px;
+	z-index: 3;
+}
+
+.orders_show {
+	display: block;
+}
+
+.orders-list {
+	list-style-type: none;
+	padding-inline-start: 0;
+	display: flex;
+
+}
+
+.orders-list-item {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	width: 100%;
+  display: flex;
+}
+
+
+.order-item_wrapper {
+	/* display: flex; */
+	flex-grow: 1;
+}
+
+
+.orders-list-item-link {
+	vertical-align: top;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 16px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.orders-list-item-link:focus,
+.orders-list-item-link:hover {
+	text-decoration: underline;
+}
+
+
+
 
 .options-list__item__button {
   position: relative;
@@ -1129,8 +1194,20 @@ line-height: 14px;
 	cursor: pointer;
 }
 
+.sale-item_show-button:hover,
+.sale-item_show-button:focus {
+	filter: invert(47%) sepia(100%) saturate(325%) hue-rotate(110deg) brightness(97%) contrast(85%);
+	color: #28A87F;
+	border-color: #28A87F;
+}
+
 .sale-item_show-arrow {
 	font-size: 0;
+}
+
+.sale-item_show-button:hover + .sale-item_show-arrow,
+.sale-item_show-button:focus + .sale-item_show-arrow {
+	filter: invert(47%) sepia(100%) saturate(325%) hue-rotate(110deg) brightness(97%) contrast(85%);
 }
 
 .sell-out {
