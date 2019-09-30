@@ -369,7 +369,7 @@ text-decoration:none;
 .main-search_results {
 	position: absolute;
 	display: none;
-	bottom: -100%;
+	top: 100%;
 	left: 0;
 	width: 100%;
 	height: auto;
@@ -380,7 +380,7 @@ text-decoration:none;
 	border-bottom-right-radius: 3px;
 	background: #FFFFFF;
 	box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
-	z-index: 0;
+	z-index: 3;
 }
 
 .show-search_results {
@@ -395,21 +395,62 @@ text-decoration:none;
 }
 
 .results-item {
+	display: flex;
+	align-items: center;
+	margin: 15px;
+}
+
+
+.show_all-items {
+	border-top: 1px solid rgba(152,152,164,0.2);
 
 }
 
 .results-item-image {
 	width: 50px;
 	height: auto;
+	vertical-align: middle;
 }
 
+.results-item-link {
+	margin-left: 15px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 16px;
+	color: #333333;
+	text-decoration: none;
+}
 
+.results-item-link:hover,
+.results-item-link:focus {
+	text-decoration: underline;
 
+}
 
+.results-item-price {
+	margin-right: 0;
+	margin-left: auto;
+}
 
-
-
-
+.results-item-show_all {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 12px;
+	color: #9898A4;
+	background-color: transparent;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px dotted #9898A4;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	cursor: pointer;
+}
 
 .user-options {
   margin-left: 10px;
@@ -986,11 +1027,36 @@ line-height: 14px;
 .hint-bestseller {
 	display: inline;
 	background-color: #BB6BD9;
+	width: 30px;
+	height: 15px;
+}
+
+.hint-bestseller::before {
+	content: 'хит';
+	top: 25%;
+	left: 15px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	position: absolute;
 }
 
 .hint-new {
 	display: inline;
 	background-color: #EFC032;
+	width: 60px;
+	height: 15px;
+}
+
+.hint-new::before {
+	content: 'новинка';
+	top: 25%;
+	left: 16px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	position: absolute;
+
+
+
 }
 
 .hint-sellout {

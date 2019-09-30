@@ -1,3 +1,5 @@
+'use strict'
+
 // Показываем модалку для авторизации
 $('.user-navigation__button').click(function(){
   $('#user_auth').addClass('modal-show');
@@ -56,17 +58,9 @@ $('i.pass').click(function(event) {
 $('.goods-list__button').click(function(event){
   $('goods-list__button').removeClass('button__active');
   $(event.target).toggleClass('button__active');
-  console.log('Menu opened!')
 });
 
-// Отображение резульатов поиска
-$('.main_search__input').on('input', function(event){
-  if (event.target.value !== '') {
-    $('.main-search_results').addClass('show-search_results')
-  } else {
-      $('.main-search_results').removeClass('show-search_results')
-  }
-});
+
 
 
 // Скрытие меню покупки
@@ -100,6 +94,16 @@ $('.sale-buy-decrement').on('click',function(event) {
 
 $(document).ready(function() {
 
+  // Отображение результатов поиска
+  $('.main_search__input').on('input', function(event){
+    if (event.target.value.trim() !== '') {
+      $('.main-search_results').addClass('show-search_results');
+    } else {
+        $('.main-search_results').removeClass('show-search_results')
+        console.log('empty!')
+    }
+  });
+
   // Карусель
   $('.news_carousel').slick({
     dots: true,
@@ -115,7 +119,7 @@ $(document).ready(function() {
   $('.sell-out_carousel').slick({
     dots: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -125,14 +129,14 @@ $(document).ready(function() {
 
 // Функция задания дедлайна
 function setCountdown(day=12, hours=12, minutes=50, seconds=25) {
-  var countDownDate = new Date()
-  time = day*86400000 + hours*3600000 + minutes*60000 + seconds*1000
+  let countDownDate = new Date()
+  let time = day*86400000 + hours*3600000 + minutes*60000 + seconds*1000
   countDownDate.setTime(countDownDate.getTime() + time)
   return countDownDate
 };
 
 // Указываем кастомные значения даты
-countDownDate = setCountdown()
+let countDownDate = setCountdown()
 
 // Запуск таймера
 var x = setInterval(function() {
